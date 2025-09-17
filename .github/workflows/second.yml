@@ -21,3 +21,4 @@ jobs:
         run: |
           echo "The message is $my_message"
           echo "The branch is $branch_name"
+          echo "THAT'S ALL"
