@@ -1,0 +1,23 @@
+# This is a basic workflow to help you get started with Actions
+
+name: SECOND
+
+on:
+  workflow_call:
+    inputs:
+      message:
+        description: Just a message
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a multi-line script
+        env: 
+          my_message : ${{ inputs.message }}
+          branch_name: ${{ github.ref_name }}
+        run: |
+          echo "The message is $my_message"
+          echo "The branch is $branch_name"
